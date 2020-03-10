@@ -1,12 +1,15 @@
 import React from 'react'
 import {View, TouchableOpacity, Image, StyleSheet} from 'react-native'
+import { useSafeArea } from 'react-native-safe-area-context'
 
 const ACTIVE_ICON_COLOR = 'rgb(59,85,243)';
 const INACTIVE_ICON_COLOR = '#000000';
 
 export default function MyTabBar({state, descriptors, navigation}) {
+    const insets = useSafeArea();
+
     return (
-        <View style={{flexDirection: 'row'}}>
+        <View style={[style.tabWrapper, {paddingBottom: insets.bottom}]}>
             {state.routes.map((route, index) => {
                 const {options} = descriptors[route.key];
 
@@ -51,7 +54,12 @@ export default function MyTabBar({state, descriptors, navigation}) {
 }
 
 const style = StyleSheet.create({
+        tabWrapper: {
+            flexDirection: 'row',
+            height: 92,
+        },
         tabButton: {
+            marginTop: 10,
             flex: 1,
             height: 50,
             justifyContent: 'center',

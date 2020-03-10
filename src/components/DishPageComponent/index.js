@@ -1,6 +1,7 @@
 import React, {memo} from 'react'
 import {View, FlatList, Text, ImageBackground, Image, StyleSheet, TouchableOpacity} from 'react-native'
-import _ from 'lodash';
+import { useSafeArea } from 'react-native-safe-area-context';
+import _ from 'lodash'
 import BackButtonIcon from '../../assets/img/BackButtonIcon/button.png'
 import ShareButtonIcon from '../../assets/img/ShareButtonIcon/share.png'
 import HeartEmptyIcon from '../../assets/img/HeartEmptyIcon/heartDefault.png'
@@ -22,26 +23,28 @@ export default DishPageComponent = memo(({dish, navigation}) => {
         image,
         starters
     } = dish;
+    const insets = useSafeArea();
+
     return (
         <View style={styles.container}>
             <ImageBackground
-                style={styles.image}
+                style={[styles.image, {height: 264 + insets.top}]}
                 resizeMode={'cover'}
                 source={image}
             >
                 <TouchableOpacity
                     onPress={navigation.goBack}
-                    style={[styles.headerActionButton, {top: 30, left: 20,}]}
+                    style={[styles.headerActionButton, {top: insets.top || 30, left: 20,}]}
                 >
                     <Image source={BackButtonIcon}/>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    style={[styles.headerActionButton, {top: 30, right: 80}]}
+                    style={[styles.headerActionButton, {top: insets.top || 30, right: 80}]}
                 >
                     <Image source={ShareButtonIcon}/>
                 </TouchableOpacity>
                 <TouchableOpacity
-                    style={[styles.headerActionButton, {top: 30, right: 20}]}
+                    style={[styles.headerActionButton, {top: insets.top || 30, right: 20}]}
                 >
                     <Image source={HeartEmptyIcon}/>
                 </TouchableOpacity>
@@ -80,7 +83,6 @@ export default DishPageComponent = memo(({dish, navigation}) => {
 const styles = StyleSheet.create({
     image: {
         width: '100%',
-        height: 264,
     },
     container: {
         flex: 1

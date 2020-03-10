@@ -1,5 +1,6 @@
 import React, {memo} from 'react'
 import {View, Text, Image, TouchableOpacity, FlatList} from 'react-native'
+import {useSafeArea} from 'react-native-safe-area-context'
 import styles from './styles'
 import FiltersComponent from '../common/Filters'
 import SearchBar from '../common/SearchBar'
@@ -10,8 +11,10 @@ import ArrowDown from '../../assets/img/ArrowDown/arrow.png'
 
 export default HomeListComponent = memo(({foodList, navigateToDish}) => {
     const {container, titleContainer, titleText, textDate, textDeliveringOn, dateContainer} = styles;
+    const insets = useSafeArea();
+
     return (
-        <View style={container}>
+        <View style={[container, {paddingTop: insets.top}]}>
             <View style={titleContainer}>
                 <Text style={titleText}>244 Jack Daniels Road</Text>
                 <TouchableOpacity><Image source={RightIcon}/></TouchableOpacity>
