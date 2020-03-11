@@ -23,7 +23,7 @@ const renderKitchens = (kitchens) => {
     )
 };
 
-export default DishDescription = memo(({item}) => {
+export default DishDescription = memo(({item, single}) => {
     const {
         title, kitchens, rating,
         orders,
@@ -32,7 +32,7 @@ export default DishDescription = memo(({item}) => {
     } = item;
     return (
         <>
-            <Text style={styles.title}>{title}</Text>
+            <Text style={[styles.title, single && {fontSize: 24}]}>{title}</Text>
             <View style={styles.kitchenRatingWrapper}>
                 {renderKitchens(kitchens)}
                 <Image style={styles.star} source={StarIcon}/>
@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         paddingVertical: 10,
+        fontFamily: 'Poppins-SemiBold'
     },
     kitchenRatingWrapper: {
         flexDirection: 'row',
@@ -64,16 +65,20 @@ const styles = StyleSheet.create({
     },
     kitchenText: {
         color: 'rgb(141,146,163)',
-        fontSize: 18,
+        fontSize: 16,
+        fontFamily: 'Poppins-Regular'
     },
     ratingText: {
         paddingLeft: 5,
-        fontSize: 16
+        fontSize: 14,
+        fontFamily: 'Poppins-Regular'
     },
     ordersText: {
-        color: 'rgb(28,25,63)'
+        color: 'rgb(28,25,63)',
+        fontFamily: 'Poppins-Regular'
     },
     star: {
-        width: 13, height: 13
+        width: 13, height: 13,
+        marginBottom: 2
     },
 });

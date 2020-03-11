@@ -17,7 +17,10 @@ export default FiltersComponent = memo(({tags}) => {
                             index === 0 && {marginLeft: 0}
                         ]}
                     >
-                        <Text style={[styles.tagText, isActive && {color: '#fff', fontWeight: 'bold'}]}>{tag}</Text>
+                        <Text style={[styles.tagText, isActive && {
+                            color: '#fff',
+                            fontFamily: 'Poppins-Medium'
+                        }]}>{tag}</Text>
                     </TouchableOpacity>
                 )
             })}
@@ -33,11 +36,12 @@ const styles = StyleSheet.create({
     tagContainer: {
         padding: 10,
         marginLeft: 15,
-        borderRadius: 20,
+        borderRadius: 25,
         backgroundColor: 'transparent'
     },
     tagText: {
         fontSize: 16,
-        color: '#000'
+        color: '#000',
+        fontFamily: 'Poppins-Regular'
     }
 });

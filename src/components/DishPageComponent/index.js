@@ -1,6 +1,6 @@
 import React, {memo} from 'react'
 import {View, FlatList, Text, ImageBackground, Image, StyleSheet, TouchableOpacity} from 'react-native'
-import { useSafeArea } from 'react-native-safe-area-context';
+import {useSafeArea} from 'react-native-safe-area-context';
 import _ from 'lodash'
 import BackButtonIcon from '../../assets/img/BackButtonIcon/button.png'
 import ShareButtonIcon from '../../assets/img/ShareButtonIcon/share.png'
@@ -50,7 +50,7 @@ export default DishPageComponent = memo(({dish, navigation}) => {
                 </TouchableOpacity>
             </ImageBackground>
             <View style={styles.contentWrapper}>
-                <DishDescription item={dish}/>
+                <DishDescription single item={dish}/>
                 <View style={styles.buttonWrapper}>
                     <TouchableOpacity style={styles.button}>
                         <Image source={TelephoneIcon}/>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     },
     flatList: {
         padding: 20,
-        paddingTop: 10,
+        paddingTop: 5,
     },
     headerActionButton: {
         position: 'absolute',
@@ -104,7 +104,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 5,
         padding: 10,
-        flex: 0.3
+        flex: 0.3,
+        alignItems: 'center'
     },
     buttonWrapper: {
         flexDirection: 'row',
@@ -116,12 +117,17 @@ const styles = StyleSheet.create({
         paddingLeft: 10,
         textTransform: 'uppercase',
         color: 'rgb(87,85,113)',
-        fontWeight: 'bold'
+        fontFamily: 'Poppins-SemiBold'
     },
     startersHeader: {
-        flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-end'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'flex-end',
+        paddingBottom: 5,
+        paddingTop: 20,
     },
     startersHeaderText: {
-        fontSize: 18
+        fontFamily: 'Poppins-Regular',
+        fontSize: 16
     }
 });

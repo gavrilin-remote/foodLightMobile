@@ -9,7 +9,9 @@ export default function MyTabBar({state, descriptors, navigation}) {
     const insets = useSafeArea();
 
     return (
-        <View style={[style.tabWrapper, {paddingBottom: insets.bottom}]}>
+        <View style={[style.tabWrapper,
+            {paddingBottom: insets.bottom}
+            ]}>
             {state.routes.map((route, index) => {
                 const {options} = descriptors[route.key];
 
@@ -56,7 +58,6 @@ export default function MyTabBar({state, descriptors, navigation}) {
 const style = StyleSheet.create({
         tabWrapper: {
             flexDirection: 'row',
-            height: 92,
         },
         tabButton: {
             marginTop: 10,

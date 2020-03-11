@@ -15,7 +15,8 @@ export default StyleSheet.create({
     },
     titleText: {
         fontSize: 18,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'Poppins-Regular'
     },
     dateContainer: {
         flexDirection: 'row',
@@ -24,11 +25,13 @@ export default StyleSheet.create({
     textDeliveringOn: {
         textTransform: 'uppercase',
         color: 'grey',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily: 'Poppins-SemiBold'
     },
     textDate: {
         textTransform: 'uppercase',
         fontWeight: 'bold',
-        color: 'rgb(251,109,58)'
+        color: 'rgb(251,109,58)',
+        fontFamily: 'Poppins-SemiBold'
     }
 })

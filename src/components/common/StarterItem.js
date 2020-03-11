@@ -7,9 +7,9 @@ export default StarterItem = memo(({item}) => {
         <View style={styles.container}>
             <Image style={styles.image} source={image}/>
             <View style={styles.descriptionWrapper}>
-                <Text style={styles.textBold}>{name}</Text>
+                <Text style={styles.textTitle}>{name}</Text>
                 <Text style={styles.textIngredients}>{ingredients.join(', ')}</Text>
-                <Text style={styles.textBold}>${price}</Text>
+                <Text style={styles.textPrice}>${price}</Text>
             </View>
         </View>
     )
@@ -33,10 +33,18 @@ const styles = StyleSheet.create({
         height: '100%',
         justifyContent: 'space-around'
     },
-    textBold: {
-        fontSize: 18, fontWeight: 'bold'
+    textTitle: {
+        fontSize: 14,
+        fontFamily: 'Poppins-Medium'
+    },
+    textPrice: {
+        fontSize: 14,
+        fontFamily: 'Poppins-SemiBold'
     },
     textIngredients: {
-        fontSize: 16, color: 'rgb(156,158,175)', maxWidth: '90%'
+        fontFamily: 'Poppins-Regular',
+        fontSize: 13,
+        color: 'rgb(156,158,175)',
+        maxWidth: '90%'
     }
 });

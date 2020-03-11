@@ -20,6 +20,9 @@
 		6D420F193608D2587F029896 /* libPods-foodLightMobile-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD49D532A7E024AA9BE833A4 /* libPods-foodLightMobile-tvOS.a */; };
 		DC27C4C5F59224AF40474E06 /* libPods-foodLightMobile-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3424C375F1C55185EB2DF2B /* libPods-foodLightMobile-tvOSTests.a */; };
 		FF2D03CBAEB4A6E0DC312407 /* libPods-foodLightMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27FDE9220B0C245191C01C2F /* libPods-foodLightMobile.a */; };
+		34B2E76278F045B594B5FF0C /* Poppins-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E6840A1F7BFA470E9BCEA904 /* Poppins-Regular.otf */; };
+		C9EEB00C4F7E48FFBF44A40F /* Poppins-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B85824ED149D403DAE41C573 /* Poppins-SemiBold.otf */; };
+		63D5E61D2F37494F95EC9872 /* Poppins-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = B2C7C1B3F1F04105BA973472 /* Poppins-Medium.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		F3424C375F1C55185EB2DF2B /* libPods-foodLightMobile-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-foodLightMobile-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD49D532A7E024AA9BE833A4 /* libPods-foodLightMobile-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-foodLightMobile-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF430F4DA59194B33CBA8D84 /* Pods-foodLightMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodLightMobile.debug.xcconfig"; path = "Target Support Files/Pods-foodLightMobile/Pods-foodLightMobile.debug.xcconfig"; sourceTree = "<group>"; };
+		E6840A1F7BFA470E9BCEA904 /* Poppins-Regular.otf */ = {isa = PBXFileReference; name = "Poppins-Regular.otf"; path = "../src/assets/fonts/Poppins-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B85824ED149D403DAE41C573 /* Poppins-SemiBold.otf */ = {isa = PBXFileReference; name = "Poppins-SemiBold.otf"; path = "../src/assets/fonts/Poppins-SemiBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B2C7C1B3F1F04105BA973472 /* Poppins-Medium.otf */ = {isa = PBXFileReference; name = "Poppins-Medium.otf"; path = "../src/assets/fonts/Poppins-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				0F29462C74799B9315F52AEA /* Pods */,
+				8C2F1BC6549C4275B8C868E8 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -197,6 +204,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		8C2F1BC6549C4275B8C868E8 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				E6840A1F7BFA470E9BCEA904 /* Poppins-Regular.otf */,
+				B85824ED149D403DAE41C573 /* Poppins-SemiBold.otf */,
+				B2C7C1B3F1F04105BA973472 /* Poppins-Medium.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -285,7 +303,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 940;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -338,6 +356,9 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				34B2E76278F045B594B5FF0C /* Poppins-Regular.otf in Resources */,
+				C9EEB00C4F7E48FFBF44A40F /* Poppins-SemiBold.otf in Resources */,
+				63D5E61D2F37494F95EC9872 /* Poppins-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
