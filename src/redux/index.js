@@ -5,9 +5,12 @@ import logger from 'redux-logger'
 import RootReducer from './reducers'
 
 const middleware = [
-    thunk,
-    __DEV__ && logger
+    thunk
 ];
+
+if (__DEV__) {
+    middleware.push(logger)
+}
 
 let finalCreateStore = applyMiddleware(...middleware)(createStore);
 
